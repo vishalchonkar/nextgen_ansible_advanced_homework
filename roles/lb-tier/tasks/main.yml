@@ -18,6 +18,7 @@
 - name: Start {{ load_balancer }}
   service:
     name: "{{ load_balancer }}"
-    state: restarted---
+    state: restarted
+© 2020 GitHub, Inc.
 
 
