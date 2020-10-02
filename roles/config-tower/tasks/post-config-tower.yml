@@ -1,4 +1,6 @@
 - name: Create Homework Assignment project
+  command: |
+    tower-cli project create --organization="{{org_name}}" --scm-type=git --scm-branch="{{scm_branch}}" --scm-url="{{ scm_url }}" --scm-update-on-launch=True -n "{{ proj_name }}"
 
 
 - name: Machine Credentail to connect to workstation using openstack.pub
@@ -48,11 +50,12 @@
     tower_username: admin
     tower_password: r3dh4t1!
     tower_verify_ssl: no
-    ssh_key_data: /root/.ssh/mykey.pem
+    ssh_key_data: /root/.ssh/openstack.pem
     username: "{{ opentlc_login }}"
 
 - name: Remove secret
   file:
     name: /root/secret.pem
     state: absent
+
 
