@@ -19,6 +19,5 @@
   service:
     name: "{{ load_balancer }}"
     state: restarted
-© 2020 GitHub, Inc.
 
 
